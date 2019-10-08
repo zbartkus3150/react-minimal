@@ -9,6 +9,8 @@ Fork the repository into your own GitHub account.
 
 Clone the repository.
 
+Install the dependencies using the command ```npm install```.
+
 Start the app using the command ```npm start```.
 
 A live server should open at ```http://localhost:3000/```.
