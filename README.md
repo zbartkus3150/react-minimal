@@ -9,6 +9,8 @@ Fork the repository into your own GitHub account.
 
 Clone the repository.
 
+From the local folder in which you clone the repository:
+
 Install the dependencies using the command ```npm install```.
 
 Start the app using the command ```npm start```.
