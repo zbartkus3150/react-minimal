@@ -19,6 +19,6 @@ A live server should open at ```http://localhost:3000/```.
 
 ## Production build
 
-Run the command ```npm build``` to create the production files.
+Run the command ```npm run build``` to create the production files.
 
 The files are created in the ```build/``` folder.
