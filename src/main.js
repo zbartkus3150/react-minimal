@@ -4,4 +4,4 @@ import MyApp from './MyApp'
 import AppTitle from './AppTitle'
 
 render(<MyApp />, document.getElementById('reactinjectedhere'))
-render(<AppTitle />, document.getElementById('reactinjectedhere'))
+render(<AppTitle />, document.getElementById('reactinjectedhere2'))
