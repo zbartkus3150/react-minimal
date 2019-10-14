@@ -6,6 +6,9 @@ const generateRandomArray = (n) => (Array.from({length: n}, () => Math.floor(Mat
 
 const Arr=[2, 56, 23, 88, 17, 4];
 
+const Arr2=[2, 5, 8, 10];
+
+const generateSqrRootArray = () => (Array.from(Arr2, element => Math.floor(Math.sqrt(element))))
 
 const MyApp = () => (
   <div>
@@ -21,6 +24,9 @@ const MyApp = () => (
 
       <p>Array elements larger than 15</p>
       {Arr.map(element=>element>15?<li>{element}</li>:false)}
+
+      <p>Square root of array elements</p>
+      {generateSqrRootArray.map(element => <li>{element}</li>)}
     </ul>
   </div> 
 )
