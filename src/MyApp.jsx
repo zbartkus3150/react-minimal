@@ -75,6 +75,14 @@ function allStudents(){
   data.forEach(element=>element.students.forEach(element1=>document.getElementById('data_id').innerHTML += "<li>" + element1.name + "</li>"))
 }
 
+function sortStudents(){
+  var temp=[];
+  document.getElementById('data_id').innerHTML = "List of all students sorted alphabetically: "
+  data.forEach(element=>element.students.forEach(element1=>temp.push(element1.name)))
+  temp.sort();
+  temp.forEach(element=>document.getElementById('data_id').innerHTML += "<li>" + element + "</li>")
+}
+
 const MyApp = () => (
   <div>
     <h1>Minimal React zbartkus3150</h1>  
@@ -93,7 +101,10 @@ const MyApp = () => (
       <p>Square root of array elements</p>
       {generateSqrRootArray().map(element => <li>{element}</li>)}
     </ul>
+
     <button onClick={allStudents}>All students</button>
+    <button onClick={sortStudents}>Sort students</button>
+
     <ul id="data_id"/>
   </div> 
 )
