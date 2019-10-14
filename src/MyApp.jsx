@@ -20,7 +20,7 @@ const MyApp = () => (
       {generateRandomArray(10).map(element => <li>{element}</li>)}
 
       <p>Array elements larger than 15</p>
-      {Arr.map(element=>element>15?<li>element</li>:false)}
+      {Arr.map(element=>element>15?<li>{element}</li>:false)}
     </ul>
   </div> 
 )
