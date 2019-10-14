@@ -71,8 +71,8 @@ const data=[
 ]
 
 function allStudents(){
-  document.getElementById().innerHTML = "List of all students: "
-  data.forEach(element=>element.students.forEach(element1=>document.getElementById().innerHTML += "<li>" + element.name + "</li>"))
+  document.getElementById('data_id').innerHTML = "List of all students: "
+  data.forEach(element=>element.students.forEach(element1=>document.getElementById('data_id').innerHTML += "<li>" + element1.name + "</li>"))
 }
 
 const MyApp = () => (
