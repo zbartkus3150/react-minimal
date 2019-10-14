@@ -26,7 +26,7 @@ const MyApp = () => (
       {Arr.map(element=>element>15?<li>{element}</li>:false)}
 
       <p>Square root of array elements</p>
-      {generateSqrRootArray.map(element => <li>{element}</li>)}
+      {generateSqrRootArray().map(element => <li>{element}</li>)}
     </ul>
   </div> 
 )
