@@ -9,6 +9,7 @@ class Input extends React.Component {
             b:0,
             arr:[]
         }
+        this.counter=1
         this.aValueChangedHandler=this.aValueChangedHandler.bind(this)
         this.bValueChangedHandler=this.bValueChangedHandler.bind(this)
         this.generateArray=this.generateArray.bind(this)
@@ -39,6 +40,7 @@ class Input extends React.Component {
 
 
     render(){
+        console.time("render - "+this.counter.toString())
         const content=(
             <div>
                 <label>Number a: </label>
@@ -52,7 +54,8 @@ class Input extends React.Component {
                 </ul>
             </div>
         )
-    
+        console.timeEnd("render - "+this.counter.toString())
+        this.counter++;
         return content
     
     }
