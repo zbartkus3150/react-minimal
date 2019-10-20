@@ -7,12 +7,16 @@ class Input extends React.Component {
         this.state={
             a:0,
             b:0,
-            arr:[]
+            arr:[],
+            sqrtArray:[],
+            flag:false
         }
         this.counter=1
         this.aValueChangedHandler=this.aValueChangedHandler.bind(this)
         this.bValueChangedHandler=this.bValueChangedHandler.bind(this)
         this.generateArray=this.generateArray.bind(this)
+        this.processArray=this.processArray.bind(this)
+        this.changeFlag=this.changeFlag.bind(this)
     }
 
     aValueChangedHandler(event){
@@ -36,6 +40,26 @@ class Input extends React.Component {
             for(i = 0; i < b - a - 1; i++)
                 this.state.arr[i] = a + i + 1;
         }
+        if(this.state.flag){
+            this.processArray();
+        }
+        else{
+            this.state.sqrtArray=[]
+        }
+    }
+
+    processArray(){
+        this.state.sqrtArray=Array.from(this.state.arr, element => Math.sqrt(element))
+    }
+
+    changeFlag(){
+        if(!this.state.flag){
+            this.setState({flag:true});
+        }
+        else{
+            this.setState({flag:false});
+        }
+        this.processArray();
     }
 
 
@@ -51,6 +75,10 @@ class Input extends React.Component {
                 <input type="number" onChange={this.bValueChangedHandler} />
                 <ul>
                     {this.state.arr.map(item => (<li key={item}>{item}</li>))}
+                </ul>
+                <button onClick={this.changeFlag}>Process array</button>
+                <ul>
+                    {this.state.sqrtArray.map(item => (<li key={item}>{item}</li>))}
                 </ul>
             </div>
         )
